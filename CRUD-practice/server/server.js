@@ -20,9 +20,7 @@ server.use(cors());
 server.use(express.static(process.env.PUBLIC_DIR));
 
 // base url set
-server.get('/', (req, res) => {
-  res.send('Hey this is my API running 🥳');
-});
+
 server.use('/products', productRouter);
 server.use('/users', userRouter);
 server.use('/posts', postRouter);
