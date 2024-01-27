@@ -12,7 +12,7 @@ function Home() {
           <button className='bg-slate-700 p-1 rounded-lg'><FcAddDatabase size={30}/></button>
          </Link>
     </header>
-    <main className='grid grid-cols-5 gap-5  m-8 mt-20'>
+    <main className='grid max-sm:grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5  m-8 mt-20'>
     <Product/>
     </main>
     </>

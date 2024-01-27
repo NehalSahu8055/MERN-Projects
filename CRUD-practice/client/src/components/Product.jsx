@@ -7,7 +7,7 @@ function Product() {
 const [product, setproduct] = useState([])
     async function getProducts(){
         try {
-            const res = await axios.get("/products");
+            const res = await axios.get("http://localhost:8080/products");
             setproduct(res.data);      
         } catch (error) {
             console.log(error)
