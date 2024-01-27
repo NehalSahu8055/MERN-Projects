@@ -17,7 +17,7 @@ const server = express();
 server.use(express.json());
 server.use(morgan('combined'));
 server.use(cors());
-server.use(express.static('./dist'));
+server.use(express.static(process.env.PUBLIC_DIR));
 
 // base url set
 server.use('/products', productRouter);
