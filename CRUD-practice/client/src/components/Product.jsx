@@ -7,7 +7,7 @@ function Product() {
 const [product, setproduct] = useState([])
     async function getProducts(){
         try {
-            const res = await axios.get("/products");
+            const res = await axios.get("/api/products");
             setproduct(res.data);      
         } catch (error) {
             console.log(error)
@@ -15,7 +15,7 @@ const [product, setproduct] = useState([])
     }
     async function deleteProduct(id){
       try {
-          const res = await axios.delete(`/products/${id}`);
+          const res = await axios.delete(`/api/products/${id}`);
           res.data && setproduct(product.filter(item =>item._id != id) )      
       } catch (error) {
           console.log(error)

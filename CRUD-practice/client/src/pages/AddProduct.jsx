@@ -9,7 +9,7 @@ function AddProduct() {
 
   async function addProduct(product){
     try {
-        const res = await axios.post("/products",product);
+        const res = await axios.post("/api/products",product);
         console.log(res.data);
     } catch (error) {
         console.log(error)

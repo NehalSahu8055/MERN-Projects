@@ -24,6 +24,7 @@ export const controllers = (jsonData) => {
 
   const get = async (req, res) => {
     const id = req.params.id;
+    console.log(id);
     try {
       res.json(await Product.findById(id));
     } catch (error) {
